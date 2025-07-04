@@ -1,6 +1,6 @@
 # HardwareInfoViewer
 
-A WPF client application to visualize live hardware metrics fetched from [HardwareInfoServer](https://github.com/your-org/HardwareInfoServer).  
+A WPF client application to visualize live hardware metrics fetched from [HardwareInfoServer](https://github.com/Mateusz-Latka/HardwareInfoServer).
 Displays CPU, GPU, RAM and Disk usage with interactive charts.
 
 ## 📋 Features
@@ -22,7 +22,7 @@ Displays CPU, GPU, RAM and Disk usage with interactive charts.
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (for building)
 - Windows OS
 - [LiveCharts](https://lvcharts.net/) 0.9.x (already included via NuGet)
-- A running instance of [HardwareInfoServer](https://github.com/your-org/HardwareInfoServer)
+- A running instance of [HardwareInfoServer](https://github.com/Mateusz-Latka/HardwareInfoServer)
 
 ---
 
