@@ -14,6 +14,7 @@ Displays CPU, GPU, RAM and Disk usage with interactive charts.
 
 ✅ Dynamic server selection — user is prompted to enter server address at startup  
 ✅ Beautiful LiveCharts-based graphs for each metric
+![image](https://github.com/user-attachments/assets/1520d8f3-9dc6-4fda-bb5a-ba9c5496bb56)
 
 ---
 
