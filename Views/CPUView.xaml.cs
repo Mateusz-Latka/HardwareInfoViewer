@@ -2,6 +2,7 @@
 using LiveCharts;
 using LiveCharts.Wpf;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace HardwareInfoViewer.Views
 {
@@ -14,12 +15,18 @@ namespace HardwareInfoViewer.Views
             InitializeComponent();
             vm = viewModel;
 
+            var lineStroke = new SolidColorBrush(Color.FromRgb(0, 255, 136));
+            var lineFill = new SolidColorBrush(Color.FromArgb(50, 0, 255, 136)); 
+
             CpuChart1.Series = new SeriesCollection
             {
                 new LineSeries
                 {
                     Title = "CPU Usage %",
-                    Values = vm.CpuValues
+                    Values = vm.CpuValues,
+                    Stroke = lineStroke,
+                    Fill = lineFill,
+                    PointForeground = lineStroke
                 }
             };
 
@@ -28,7 +35,10 @@ namespace HardwareInfoViewer.Views
                 new LineSeries
                 {
                     Title = "CPU Temperature (\u00b0C)",
-                    Values = vm.CpuTempValues
+                    Values = vm.CpuTempValues,
+                    Stroke = lineStroke,
+                    Fill = lineFill,
+                    PointForeground = lineStroke
                 }
             };
 
@@ -37,9 +47,17 @@ namespace HardwareInfoViewer.Views
                 new LineSeries
                 {
                     Title = "CPU Power (W)",
-                    Values = vm.CpuPowerValues
+                    Values = vm.CpuPowerValues,
+                    Stroke = lineStroke,
+                    Fill = lineFill,
+                    PointForeground = lineStroke
                 }
             };
+
+
+            CpuChart1.DataTooltip = TooltipHelper.CreateDefaultTooltip();
+            CpuChart2.DataTooltip = TooltipHelper.CreateDefaultTooltip();
+            CpuChart3.DataTooltip = TooltipHelper.CreateDefaultTooltip();
         }
     }
 }
